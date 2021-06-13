@@ -1,6 +1,6 @@
 # 微信小程序状态管理
 基于发布订阅模式、小程序自定义组件behaviors配置 实现数据的状态管理。  
-> 详细使用可参考demo https://github.com/ming-razor/mini_program_store_demo
+> 详细使用可参考 [demo](https://github.com/ming-razor/mini_program_store_demo)
    
 ## 应用场景
 原生微信小程序开发
