@@ -9,7 +9,7 @@ module.exports = {
         add_loading: false,
     },
     /* 
-        异步方法
+        异步方法: return 会返回给 dispatch()
     */
     effects: {
         delayAdd(action, { dispatch, storeState }) {
