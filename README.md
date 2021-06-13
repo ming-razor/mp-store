@@ -73,8 +73,7 @@ module.exports = createStore({
 });
 ```
 
-3. 在页面或组件的js的订阅需要的数据
-> 页面与组件都使用 <font color="#dd0000">Component 构造器</font>
+3. 在页面或组件的js订阅需要的数据；页面与组件都使用 **Component 构造器**
 ```javascript
 const store = require("../../store/store");
 const connect = require('../../store/connect');
