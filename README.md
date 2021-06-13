@@ -1,5 +1,6 @@
 # 微信小程序状态管理
-基于发布订阅模式、小程序自定义组件behaviors配置 实现数据的状态管理。
+基于发布订阅模式、小程序自定义组件behaviors配置 实现数据的状态管理。  
+> 详细使用可参考demo https://github.com/ming-razor/mini_program_store_demo
    
 ## 应用场景
 原生微信小程序开发
@@ -73,6 +74,7 @@ module.exports = createStore({
 ```
 
 3. 在页面或组件的js的订阅需要的数据
+> 页面与组件都使用 <font color="#dd0000">Component 构造器</font>
 ```javascript
 const store = require("../../store/store");
 const connect = require('../../store/connect');
@@ -90,7 +92,7 @@ Component({
     },
     methods: {
         /*  
-            2. 数据更新会触发 onStoreStateUpdate, 参数是 store 的 state
+            1. 数据更新会触发 onStoreStateUpdate, 参数是 store 的 state
         */
         onStoreStateUpdate({ counter }) {
             this.setData({
@@ -133,10 +135,14 @@ store.subscribe(subscribeModelNames, subscribeCallback)
   * subscribeCallback: function()  订阅的model发布状态改变触发的回调
 ---
 ## 必要文件的简单说明 
-* utils/createStore.js createStore方法 解析注入的models，创建store。
-* store/store.js store对象。可用于获取所有数据(state); 触发状态改变(dispatch); 订阅与取消订阅(subscribe/unsubscribe)。
-* store/connect.js connect方法用于接受需要订阅model，创建 behavior。 用于组件订阅
-* store/models/* 数据模块管理文件
+* utils/createStore.js 
+  > 实现了js发布订阅。 解析model，创建store。
+* store/store.js 
+  > 具体的store对象。可用于获取所有数据(state); 触发状态改变(dispatch); 订阅与取消订阅(subscribe/unsubscribe)。
+* store/connect.js 
+  > connect方法用于接受需要订阅model，创建 behavior。 用于组件订阅
+* store/models/* 
+  > 数据模块管理文件
 
 
 
