@@ -1,0 +1,6 @@
+.margin_b_10 {
+    margin-bottom: 10rpx;
+}
+.margin_b_20 {
+    margin-bottom: 20rpx;
+}

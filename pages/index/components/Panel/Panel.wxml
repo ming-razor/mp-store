@@ -1,0 +1,3 @@
+<view class="panel">
+    {{count}}
+</view>

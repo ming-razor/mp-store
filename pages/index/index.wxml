@@ -1,0 +1,19 @@
+<Panel />
+
+<view class="method">
+    <button 
+        type="primary" 
+        class="margin_b_20"
+        bindtap="onAdd"
+    >
+        加1
+    </button>
+    <button 
+        type="primary" 
+        class="margin_b_20"
+        bindtap="onAsyncAdd"
+        loading="{{add_loading}}"
+    >
+        异步加1
+    </button>
+</view>

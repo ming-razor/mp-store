@@ -1,0 +1,5 @@
+.panel {
+    line-height: 40vh;
+    font-size  : 160rpx;
+    text-align : center;
+}
